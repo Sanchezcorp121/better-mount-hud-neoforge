@@ -1,0 +1,4 @@
+# Changelog
+
+## 1.0.0
+- First release for NeoForge: Minecraft 1.21.1, 26.1.2, 26.2 and 26.3.

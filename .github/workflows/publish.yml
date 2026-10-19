@@ -1,0 +1,58 @@
+# Publishes every version's jar to Modrinth, CurseForge and a GitHub release when a tag like v1.0.0 is pushed.
+# Secrets needed in the repo: MODRINTH_TOKEN, CURSEFORGE_TOKEN. Fill in the two project ids below after the
+# projects exist on each site.
+name: Publish
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        include:
+          - mc: "1.21.1"
+            java: "21"
+          - mc: "26.1.2"
+            java: "25"
+          - mc: "26.2"
+            java: "25"
+          - mc: "26.3"
+            java: "25"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build ${{ matrix.mc }}
+        working-directory: versions/${{ matrix.mc }}
+        run: ./gradlew build --no-daemon
+      - name: Version from tag
+        id: ver
+        run: echo "value=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+      - name: Publish ${{ matrix.mc }}
+        uses: Kira-NT/mc-publish@v3.3
+        with:
+          modrinth-id: REPLACE_MODRINTH_ID
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          curseforge-id: REPLACE_CURSEFORGE_ID
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-tag: ${{ github.ref_name }}
+          files: versions/${{ matrix.mc }}/build/libs/!(*-@(dev|sources|javadoc)).jar
+          name: Better Mount HUD ${{ steps.ver.outputs.value }} for NeoForge ${{ matrix.mc }}
+          version: ${{ steps.ver.outputs.value }}+mc${{ matrix.mc }}
+          version-type: release
+          changelog-file: CHANGELOG.md
+          loaders: neoforge
+          game-versions: ${{ matrix.mc }}
+          java: ${{ matrix.java }}
+          retry-attempts: 3
