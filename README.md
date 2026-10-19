@@ -13,6 +13,7 @@ No dependencies, works on vanilla servers, fine to put in modpacks.
 | Minecraft | NeoForge | Java |
 |---|---|---|
 | 1.21.1 | 21.1.252 or newer | 21 |
+| 1.21.11 | 21.11.48 or newer | 21 |
 | 26.1.2 | 26.1.2.122 or newer | 25 |
 | 26.2 | 26.2.0.93 or newer | 25 |
 | 26.3 | 26.3.0.94 or newer | 25 |
