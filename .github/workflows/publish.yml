@@ -1,6 +1,5 @@
-# Publishes every version's jar to Modrinth, CurseForge and a GitHub release when a tag like v1.0.0 is pushed.
-# Secrets needed in the repo: MODRINTH_TOKEN, CURSEFORGE_TOKEN. Fill in the two project ids below after the
-# projects exist on each site.
+# Publishes every version's jar to Modrinth, CurseForge and a GitHub release when a tag like v1.0.1 is pushed.
+# Needs the MODRINTH_TOKEN and CURSEFORGE_TOKEN repo secrets.
 name: Publish
 
 on:
@@ -41,9 +40,9 @@ jobs:
       - name: Publish ${{ matrix.mc }}
         uses: Kira-NT/mc-publish@v3.3
         with:
-          modrinth-id: REPLACE_MODRINTH_ID
+          modrinth-id: fwskeKeM
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          curseforge-id: REPLACE_CURSEFORGE_ID
+          curseforge-id: 1754826
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           github-tag: ${{ github.ref_name }}
