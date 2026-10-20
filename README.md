@@ -14,6 +14,7 @@ No dependencies, works on vanilla servers, fine to put in modpacks.
 |---|---|---|
 | 1.21.1 | 21.1.252 or newer | 21 |
 | 1.21.4 | 21.4.161 or newer | 21 |
+| 1.21.5 | 21.5.101 or newer | 21 |
 | 1.21.8 | 21.8.57 or newer | 21 |
 | 1.21.10 | 21.10.64 or newer | 21 |
 | 1.21.11 | 21.11.48 or newer | 21 |
