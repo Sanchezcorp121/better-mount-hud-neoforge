@@ -15,6 +15,8 @@ jobs:
       max-parallel: 1
       matrix:
         include:
+          - mc: "1.20.4"
+            java: "17"
           - mc: "1.21"
             java: "21"
           - mc: "1.21.1"
