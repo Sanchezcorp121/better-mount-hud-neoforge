@@ -1,5 +1,4 @@
-# Publishes every version's jar to Modrinth, CurseForge and a GitHub release when a tag like v1.0.1 is pushed.
-# Needs the MODRINTH_TOKEN and CURSEFORGE_TOKEN repo secrets.
+# needs MODRINTH_TOKEN and CURSEFORGE_TOKEN secrets
 name: Publish
 
 on:

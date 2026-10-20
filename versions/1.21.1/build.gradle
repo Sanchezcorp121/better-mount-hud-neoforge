@@ -10,7 +10,6 @@ base {
     archivesName = "${mod_id}-neoforge"
 }
 
-// Mojang ships Java 21 to end users in 1.21.1, so the mod targets Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
@@ -37,7 +36,6 @@ neoForge {
     }
 }
 
-// neoforge.mods.toml is a template so the version numbers come from gradle.properties
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
             minecraft_version      : minecraft_version,

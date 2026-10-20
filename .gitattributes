@@ -4,7 +4,6 @@
 src/generated/**/.cache/* text eol=lf
 src/generated/**/*.json text eol=lf
 
-# Keep the Gradle wrapper runnable on Linux CI and avoid CRLF churn on Windows checkouts
 * text=auto
 gradlew text eol=lf
 *.sh text eol=lf
