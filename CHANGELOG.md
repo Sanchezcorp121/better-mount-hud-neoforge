@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0 for 1.21.4, 1.21.8 and 1.21.10
+- Added builds for Minecraft 1.21.4, 1.21.8 and 1.21.10. No other changes.
+
 ## 1.0.0 for 1.21.11
 - Added a build for Minecraft 1.21.11. No other changes.
 
