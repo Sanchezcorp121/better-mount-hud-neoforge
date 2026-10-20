@@ -59,7 +59,3 @@ tasks.withType(JavaCompile).configureEach {
 jar {
     from(rootProject.file('../../LICENSE')) { rename { 'LICENSE_bettermounthud' } }
 }
-
-if (file('devtest.gradle').exists()) {
-    apply from: 'devtest.gradle'
-}
