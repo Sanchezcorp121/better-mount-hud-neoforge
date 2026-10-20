@@ -11,7 +11,7 @@ displayURL="https://github.com/Sanchezcorp121/better-mount-hud-neoforge"
 logoFile="bettermounthud.png"
 credits="Unofficial NeoForge port of Better Mount HUD by Lortseam (GPL-3.0)."
 description='''
-Improves the ingame HUD while riding a mount: keeps the hunger bar visible, shows mount health above it, and shows the experience bar until you hold jump.
+Improves the in-game HUD while riding a mount: keeps the hunger bar visible, shows mount health above it, and shows the experience bar until you hold jump.
 '''
 
 [[mixins]]
