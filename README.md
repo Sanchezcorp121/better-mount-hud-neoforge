@@ -1,5 +1,8 @@
 # Better Mount HUD (NeoForge)
 
+[![Modrinth](https://img.shields.io/badge/Modrinth-better--mount--hud--neoforged-1bd96a?logo=modrinth&logoColor=white)](https://modrinth.com/mod/better-mount-hud-neoforged)
+[![CurseForge](https://img.shields.io/badge/CurseForge-better--mount--hud--neoforge-f16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/better-mount-hud-neoforge)
+
 Unofficial NeoForge port of [Better Mount HUD](https://modrinth.com/mod/better-mount-hud) by Lortseam.
 Please don't report issues to Lortseam, use this repo's issue tracker.
 
