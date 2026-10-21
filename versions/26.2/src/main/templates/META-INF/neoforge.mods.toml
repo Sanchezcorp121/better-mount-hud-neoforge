@@ -5,6 +5,7 @@ issueTrackerURL="https://github.com/Sanchezcorp121/better-mount-hud-neoforge/iss
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
+authors="Sanchezcorp121"
 displayURL="https://github.com/Sanchezcorp121/better-mount-hud-neoforge"
 iconFile="bettermounthud.png"
 credits="Unofficial NeoForge port of Better Mount HUD by Lortseam (GPL-3.0)."
